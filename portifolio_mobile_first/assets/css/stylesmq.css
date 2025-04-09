@@ -1,0 +1,361 @@
+@charset "utf-8";
+
+/* 
+mobile 600 px 
+tablet 768 px
+desktop 992 px
+smart_tv 1200 px
+*/
+:root {
+    --maincolor: #eb6a0b;
+    --secundcolor: #001e36;
+    --botaocolor: #fff7e5;
+
+    --txtcolor: #060606;
+
+    --txtcolor1: #f5f5f5;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to top, var(--secundcolor), var(--txtcolor));
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+
+header{
+    background-color: #04031d;
+    margin-top: 3px;
+    border-radius: 7px 7px 0px 0px;
+    width: 90vw;
+    margin: auto;
+}
+
+header>h1 {
+    text-align: center;
+    color: withesmoke;
+    padding: 3px;
+    text-shadow: #965939 1px 1px 10px;
+    margin-top: 17px;
+    
+}
+
+#burger {
+    background-color: #0a0a1a;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: auto;
+    padding: 7px;
+    width: 90vw;
+    cursor: pointer;
+}
+
+#burger:hover {
+    background-color: #c5a898;
+
+}
+
+menu {
+    color: whitesmoke;
+    text-align: center;
+list-style-type: none;
+width: 90vw;
+margin: auto;
+}
+
+menu>ul {
+    list-style-type: none;
+}
+
+menu>ul>li>a {
+    display: block;
+    padding: 7px;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--txtcolor);
+    border-radius: 0px 0px 0px 0px;
+    color: #f5f5f5;
+    margin: auto;
+}
+
+menu>ul>li>a:hover {
+    background-color: var(--botaocolor);
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+main {
+    background-color: var(--maincolor);
+    height: max-content;
+    width: 90vw;
+    text-align: justify;
+    padding: 7px 7px 10px 10px;
+    margin: auto;
+}
+
+p {
+    text-indent: 17px;
+    /*withe-space: nowrap; */
+
+}
+
+img{}
+
+footer {
+    background-color: (var(--secundcolor));
+    width: 90vw;
+    margin: auto;
+
+}
+
+footer>p {
+    background-color: #dfdbd9;
+    text-align: center;
+    border-radius: 0px 0px 7px 7px;
+    width: 90vw;
+    padding: 7px;
+    margin: auto;
+}
+
+img {
+    display: block;
+    margin: auto;
+
+}
+
+img#mobile {
+    display: block;
+}
+    img#tablet {
+        display: none;
+
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        body {
+            background-image:url("../back-tablet.jpg");
+    
+        }
+    
+        #burger {
+            display: none;
+        }
+    
+    
+        menu {
+            display: block;
+            width: 90vw;
+            margin: auto;
+            background-color: #21203f;
+        }
+    
+        menu>ul>li {
+            display: inline-block;
+            background-color: #21203f;
+    
+        }
+    
+        main {
+            width: 90vw;
+            margin: auto;
+        }
+    
+        article>h2 {
+            padding-bottom: 17px;
+            width: 90vw;
+            margin: auto;
+        }
+    
+        article>p {
+            text-align: justify;
+            margin-bottom: 17px;
+            text-indent: 17px;
+        }
+    
+        footer {
+            width: 90vw;
+            margin: auto;
+        }
+    
+        img#mobile {
+            display: none;
+        }
+    
+        img#tablet {
+            display: block;
+        }
+    
+        img#print {
+            display: none;
+        }
+    
+        img#pc {
+            display: none;
+        }
+    
+        img#tv {
+            display: none;
+        }
+    }
+    
+    
+    /* media para pc com  largura de tela menor que 992px para o maior de 1200px
+    onde sera modificado as medidas do menu, menu lista, main > article onde o menu
+    deve estar bloqueado seguindo as margens e cor de fundo dos elementos e 
+    deixando assim o menu burger oculto, forçando assim o menu aparecendo inline-block
+    (na horizontal) e sua exibição de imagens */
+    
+    @media screen and (min-width: 993px) and (max-width: 1200px) {
+        body {
+            background-image:url("../back-pc.jpg");
+        }
+    
+        #burger {
+            display: none;
+        }
+    
+        menu {
+            display: block;
+            background-color: #21203f;
+        }
+    
+        menu>ul>li {
+            display: inline-block;
+            background-color: #21203f;
+        }
+    
+        main {
+            width: 90vw;
+            margin: auto;
+        }
+    
+        article>h2 {
+            padding-bottom: 17px;
+        }
+    
+        article>p {
+            text-align: justify;
+            margin-bottom: 17px;
+            text-indent: 17px;
+        }
+    
+        footer {
+            width: 90vw;
+            margin: auto;
+        }
+    
+        img#mobile {
+            display: none;
+        }
+    
+        img#tablet {
+            display: none;
+        }
+    
+        img#print {
+            display: none;
+        }
+    
+        img#pc {
+            display: block;
+        }
+    
+        img#tv {
+            display: none;
+        }
+    }
+    
+    /* media para smart_tv com  largura de tela menor que 992px para o maior de 1200px
+    onde sera modificado as medidas do menu, menu lista, main > article onde o menu
+    deve estar bloqueado seguindo as margens e cor de fundo dos elementos e 
+    deixando assim o menu burger oculto, forçando assim o menu aparecendo inline-block
+    (na horizontal) e sua exibição de imagens */
+    
+    @media screen and (min-width: 1201px) {
+        body {
+            background-image:url("../back-tv.jpg");
+            background-repeat: repeat-x;
+            background-attachment: fixed;
+        }
+    
+        #burger {
+            display: none;
+        }
+    
+        menu {
+            display: block;
+            background-color: #21203f;
+        }
+    
+        menu>ul>li {
+            display: inline-block;
+            background-color: var(--maincolor);
+        }
+    
+        main {
+            width: 90vw;
+            margin: auto;
+        }
+    
+        article>h2 {
+            padding-bottom: 17px;
+        }
+    
+        article>p {
+            text-align: justify;
+            margin-bottom: 17px;
+            text-indent: 17px;
+        }
+    
+        footer {
+            width: 90vw;
+            margin: auto;
+        }
+    
+        img#mobile {
+            display: none;
+        }
+    
+        img#tablet {
+            display: none;
+        }
+    
+        img#print {
+            display: none;
+        }
+    
+        img#pc {
+            display: none;
+        }
+    
+        img#tv {
+            display: block;
+        }
+    }
